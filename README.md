@@ -1,5 +1,10 @@
-# IE7500_GroupF
-Applied Natural Language Processing in Engineering (NU)
+# IE7500: Applied Natural Language Processing in Engineering (NEU)
+
+## Group F
+
+  * Bowen Yang
+  * Subhasish Bhaumik
+  * Allison Selwah
 
 ## Project Overview
 
