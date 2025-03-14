@@ -1,22 +1,10 @@
-# IE7500: Applied Natural Language Processing in Engineering (NEU)
+# Deep Learning-based Sentiment Classification for Amazon Product 
 
 ## Group F
 
   * Bowen Yang
   * Subhasish Bhaumik
   * Allison Selwah
-
-## Project Overview
-
-This project aims to guide students through the complete lifecycle of an NLP project. NLP projects typically revolve around enabling machines to understand, interpret, and generate human language in ways that are meaningful and useful for the purposes of automating language-related tasks, enhancing communication, analyzing language for insights, facilitating accessibility, supporting knowledge retrieval and management, advancing AI understanding of human language or solving industry-specific problems. 
-
-For this course projects, teams of up to three students will submit a detailed project proposal outlining their goals, problem statement, dataset selection, and expected outcomes. Following proposal approval, teams will develop their chosen NLP models using appropriate frameworks, maintaining a well-documented GitHub repository. The models will be evaluated using relevant performance metrics, with insights and potential improvements discussed. Finally, teams will submit a comprehensive report and a video presentation summarizing their project journey and findings.
-
-Please refer to this address for the updated [Lab contents](https://github.com/raminmohammadi/NLP/tree/main). All the labs are available here for you so you can clone it on their own personal machine. 
-
-
-OK, here's a detailed README.md file in Markdown format based on the Python code you provided.
-
 
 
 ## Table of Contents
@@ -37,7 +25,53 @@ OK, here's a detailed README.md file in Markdown format based on the Python code
 
 ## Project Description
 
+This project aims to develop an advanced sentiment analysis model using Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM) networks to classify product reviews from Amazon into positive and negative sentiment categories. By leveraging deep learning techniques, we will try to create a robust model capable of understanding the contextual details in product reviews, providing valuable insights into customer sentiment. 
+
 The primary goal of this project is to develop and compare different RNN-based models for sentiment analysis. The script allows users to train and evaluate SimpleRNN, LSTM, GRU, and Bidirectional LSTM networks on text data to classify sentiments (e.g., positive or negative). It includes utilities for data preprocessing, model building, training, evaluation, and visualization of results, such as confusion matrices and training history plots.
+
+## Problem Statement
+
+In the digital age of e-commerce, product reviews have become a critical source of information for both consumers and businesses. The exponential growth of online shopping platforms has led to an unprecedented volume of user-generated content that holds immense strategic value. Consider these compelling insights:
+
+**Consumer Decision-Making:**
+
+* According to CapitalOne Shopping:
+    * 99% of consumers read online reviews before making a purchase.
+    * Reviews influence 93% of consumers’ purchasing decisions.
+* Reviews influence purchasing decisions across all product categories.
+* Potential buyers rely heavily on sentiment expressed in previous customers' experiences.
+
+**Business Intelligence:**
+
+* Companies lose approximately $62 billion annually due to poor customer service ([https://www.forbes.com/sites/shephyken/2017/04/01/are-you-part-of-the-62-billion-loss-due-to-poor-customer-service/](https://www.forbes.com/sites/shephyken/2017/04/01/are-you-part-of-the-62-billion-loss-due-to-poor-customer-service/)).
+* Sentiment analysis provides real-time insights into product performance and customer satisfaction.
+* Helps identify product strengths, weaknesses, and areas for improvement.
+
+**Economic Impact:**
+
+* A single negative review can drive away potential customers.
+* Positive reviews can increase conversion rates by up to 3 times.
+* Reviews act as a crucial trust-building mechanism in online marketplaces.
+
+**Challenges in Manual Review Analysis:**
+
+* Massive volume of reviews (millions generated daily).
+* Time-consuming manual sentiment assessment.
+* Subjective human interpretation.
+* Inability to process reviews at scale.
+
+**Relevance to NLP:**
+
+* Recurrent Neural Networks (RNNs) are highly relevant for sentiment analysis in Natural Language Processing (NLP) due to their ability to effectively process sequential data, like text, where the meaning of a word can be influenced by the words that precede or follow it.
+* Sentiment analysis involves determining the emotional tone behind a piece of text, such as whether a sentence expresses positive, negative, or neutral sentiment.
+* RNNs are capable of capturing the temporal dependencies in text, allowing them to consider the context provided by earlier words when predicting sentiment.
+
+* Modeling language's intrinsic sequentially.
+* Capturing complex contextual nuances.
+* Providing adaptive, learned representations.
+* Handling linguistic complexity dynamically.
+
+* The approach transforms sentiment analysis from a static classification task to a sophisticated, context-aware computational linguistic challenge.
 
 ## Dependencies
 
@@ -206,33 +240,5 @@ The script also generates plots of the training and validation accuracy and loss
 
 The `save_complete_model` function saves the trained models to the `complete_models` directory.  Each model is saved as a `.keras` file, and associated metadata is saved as a JSON file. This allows you to load and reuse the trained models later without retraining.
 
-## Contributing
 
-Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the repository.
 
-## License
-
-This project is licensed under the [Specify License, e.g., MIT License]. See the `LICENSE` file for more details.
-
-## Author
-
-[Your Name or Organization Name]
-[Your Email or Contact Information]
-
-```
-
-**Explanation of the README Content:**
-
-* **Clear Structure:** The README is organized with headings and subheadings for easy navigation.
-* **Comprehensive Description:** It provides a detailed overview of the project, its purpose, and the functionalities of the code.
-* **Dependency Management:** It clearly outlines the required libraries and how to install them.
-* **Data Handling:** It explains the expected data format and location.
-* **Usage Instructions:** It provides step-by-step instructions on how to run the script.
-* **Code Breakdown:** It explains the purpose and functionality of each function and class in the script.
-* **Evaluation Metrics:** It specifies the metrics used to evaluate the models' performance.
-* **Model Saving:** It describes how the models are saved and the format used.
-* **Contribution and License:** It includes sections for contributing to the project and the licensing information.
-* **Author Information:** It provides information about the author(s) of the code.
-
-This detailed README will be very helpful for anyone who wants to understand, use, or contribute to your project. Remember to replace the bracketed placeholders (e.g., `<repository_url>`, `[Specify License, e.g., MIT License]`, and author information) with your actual information.
-```
