@@ -148,7 +148,7 @@ The script will:
 
 ## Model Architecture
 
-![Relative](../images/RNN.drawio.png)
+![Relative](images/RNN.drawio.png)
 
 ## Code Explanation
 
