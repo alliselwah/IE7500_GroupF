@@ -146,6 +146,10 @@ The script will:
 -   Save the trained models.
 ```
 
+## Model Architecture
+
+![Relative](../images/RNN.drawio.png)
+
 ## Code Explanation
 
 The `rnn.py` script is organized into several functions and classes to handle different aspects of the sentiment analysis task.
