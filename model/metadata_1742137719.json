@@ -1,0 +1,6 @@
+{
+    "model_type": "lstm",
+    "save_date": "2025-03-16T11:08:39.675863",
+    "keras_version": "3.8.0",
+    "model_name": "sentiment_analysis_lstm_1742137719.keras"
+}

@@ -1,0 +1,6 @@
+{
+    "model_type": "gru",
+    "save_date": "2025-03-16T11:12:47.271653",
+    "keras_version": "3.8.0",
+    "model_name": "sentiment_analysis_gru_1742137967.keras"
+}
