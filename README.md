@@ -9,19 +9,21 @@
 
 ## Table of Contents
 
--   [Project Description](#project-description)
--   [Dependencies](#dependencies)
--   [Installation](#installation)
--   [Data](#data)
--   [Usage](#usage)
--   [Code Explanation](#code-explanation)
-    -   [Methods](#methods)
-    -   [Classes](#classes)
--   [Evaluation](#evaluation)
--   [Saving Models](#saving-models)
--   [Contributing](#contributing)
--   [License](#license)
--   [Author](#author)
+- [Deep Learning-based Sentiment Classification for Amazon Product](#deep-learning-based-sentiment-classification-for-amazon-product)
+  - [Group F](#group-f)
+  - [Table of Contents](#table-of-contents)
+  - [Project Description](#project-description)
+  - [Problem Statement](#problem-statement)
+  - [Dependencies](#dependencies)
+  - [Installation](#installation)
+  - [Data](#data)
+  - [Usage](#usage)
+  - [Model Architecture](#model-architecture)
+  - [Code Explanation](#code-explanation)
+    - [Methods](#methods)
+    - [Classes](#classes)
+  - [Evaluation](#evaluation)
+  - [Saving Models](#saving-models)
 
 ## Project Description
 
