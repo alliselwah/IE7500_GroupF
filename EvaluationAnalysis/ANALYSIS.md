@@ -1,13 +1,13 @@
 # Evaluation
 
 ## Planning
-![Relative](images/experimental_planning.png)
+![Relative](../images/experimental_planning.png)
 
 To determine the most effective model architecture and hyperparameters, a systematic experimentation process was undertaken. We explored various configurations, systematically altering parameters across different runs. Key aspects tested included the type of recurrent layer (Simple RNN, LSTM, GRU), the vocabulary size used for tokenization (5000 or 10000 words), the number of neurons in the recurrent layer (32 or 64), the learning rate for optimization (0.001 or 0.005), and the activation function (ReLU or Leaky ReLU). We also experimented with different dataset sizes ('Small' vs. 'Large') and toggled the use of mechanisms like Attention layers and Early Stopping to prevent overfitting. Each unique combination of these parameters constitutes a distinct experiment. All these experiments, along with their specific configurations and resulting metrics, will be logged using MLflow. The primary metric for comparison will be the validation accuracy achieved during training, enabling us to objectively identify the highest-performing model configuration from this series of tests.
 
 
 ## Analysis
-![Relative](images/mlflow_run_comparisons.png)
+![Relative](../images/mlflow_run_comparisons.png)
 This plot visualizes the relationship between selected hyperparameters (parameters) and resulting performance metrics across multiple experiments. Each line represents a single experimental run, connecting its specific parameter values and achieved metrics across the vertical axes. The color of the line corresponds to the validation accuracy, with brighter/warmer colors (like yellow/orange, towards the top of the color bar on the right) indicating higher accuracy (around 0.95-0.96) and darker/cooler colors (blue/purple, towards the bottom) indicating lower accuracy (around 0.91-0.92).
 
 Here's a breakdown of the observations:
