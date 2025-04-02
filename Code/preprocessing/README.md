@@ -1,6 +1,6 @@
 # Data Pre-Processing
 
-## Why PySpark
+## Why PySpark ?
 PySpark was used for preprocessing this data because of the dataset's large size and the need for efficient, scalable processing. The training dataset contains 3.6 million reviews and the test set contains 400,000 reviews, totaling 4 million records. Processing such a volume of text data, involving steps like cleaning, tokenization, and applying UDFs, can be computationally expensive and memory-intensive for standard single-machine libraries like Pandas. PySpark, built on Apache Spark, is specifically designed for distributed data processing. It allows the workload to be parallelized across multiple CPU cores (as configured with local[*], executor instances, and cores ) or even across a cluster of machines. This distributed approach significantly speeds up the preprocessing tasks and makes it feasible to handle datasets that might exceed the memory capacity of a single node, making PySpark a necessary tool for efficiently preparing this large-scale dataset for model training.
 
 ## Sections
