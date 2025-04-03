@@ -30,5 +30,7 @@ Here's a breakdown of the observations:
 **Additional Observations:** Based on the comparison charts for the Sen3ment Analysis experiments, several key observations 
 can be made regarding model performance across different runs. The dashboard displays `test accuracy`, `test loss`, `training accuracy`, `training loss`, `validation accuracy`, and `validation loss`, allowing 
 for a comprehensive evaluation.
+
 ![Relative](../images/chart_Comparisons.png)
+
 Run EXP_1743551770 demonstrated superior performance, achieving the highest test accuracy of approximately 0.9585, significantly beher than other compared runs which showed accuracies around 0.92 or lower. This top-performing run also corresponded to the lowest test loss (around 0.17). The line graphs tracking metrics over training steps reveal expected learning curves: training accuracy generally increased while training loss decreased, eventually plateauing for most runs. `validation accuracy` curves showed improvement but with more fluctuations compared to training, while validation loss curves decreased ini3ally but flahened or slightly increased for some runs later in training, poten3ally indica3ng the point where overfiqng began. These visualizations effectively highlight EXP_1743551770 as the most successful experiment based on its strong generalization to the test set, supported by its performance trends on the validation set throughout the training process
