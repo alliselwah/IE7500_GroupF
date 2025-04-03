@@ -25,26 +25,10 @@ Here's a breakdown of the observations:
 
 4.  **Validation vs. Test Accuracy:** The lines generally maintain similar relative heights between the `val_accuracy` and `test_accuracy` axes. This indicates good generalization – models that performed well on the validation set also tended to perform well on the unseen test set. The best runs achieved both high validation and high test accuracy (~0.96).
 
-**In summary:** The parallel coordinates plot highlights that using a higher number of neurons (e.g., 64), a larger 
-embedding dimension (e.g., 150-200), and selec3ng specific RNN architectures (likely LSTM or 
-GRU) were crucial factors in achieving the best valida3on and test accuracies (around 0.96) in these 
-experiments. The number of epochs showed an op3mal range rather than a simple linear trend. 
-The results also showed good consistency between valida3on and test performance across the 
-runs
+**In summary:** The parallel coordinates plot highlights that using a higher number of neurons (e.g., 64), a larger embedding dimension (e.g., 150-200), and selec3ng specific RNN architectures (likely LSTM or GRU) were crucial factors in achieving the best valida3on and test accuracies (around 0.96) in these experiments. The number of epochs showed an op3mal range rather than a simple linear trend. The results also showed good consistency between valida3on and test performance across the runs
 
-**Addi3onal Observations:** Based on the comparison charts for the Sen3ment Analysis experiments, several key observations 
-can be made regarding model performance across different runs. The dashboard displays test 
-accuracy, test loss, training accuracy, training loss, valida3on accuracy, and valida3on loss, allowing 
-for a comprehensive evalua3on.
+**Additional Observations:** Based on the comparison charts for the Sen3ment Analysis experiments, several key observations 
+can be made regarding model performance across different runs. The dashboard displays `test accuracy`, `test loss`, `training accuracy`, `training loss`, `validation accuracy`, and `validation loss`, allowing 
+for a comprehensive evaluation.
 ![Relative](../images/chart_Comparisons.png)
-Run EXP_1743551770 demonstrated superior performance, achieving the highest test accuracy of 
-approximately 0.9585, significantly beher than other compared runs which showed accuracies 
-around 0.92 or lower. This top-performing run also corresponded to the lowest test loss (around 
-0.17). The line graphs tracking metrics over training steps reveal expected learning curves: training 
-accuracy generally increased while training loss decreased, eventually plateauing for most runs. 
-Valida3on accuracy curves showed improvement but with more fluctua3ons compared to training, 
-while valida3on loss curves decreased ini3ally but flahened or slightly increased for some runs 
-later in training, poten3ally indica3ng the point where overfiqng began. These visualiza3ons
-effec3vely highlight EXP_1743551770 as the most successful experiment based on its strong 
-generaliza3on to the test set, supported by its performance trends on the valida3on set 
-throughout the training process
+Run EXP_1743551770 demonstrated superior performance, achieving the highest test accuracy of approximately 0.9585, significantly beher than other compared runs which showed accuracies around 0.92 or lower. This top-performing run also corresponded to the lowest test loss (around 0.17). The line graphs tracking metrics over training steps reveal expected learning curves: training accuracy generally increased while training loss decreased, eventually plateauing for most runs. `validation accuracy` curves showed improvement but with more fluctuations compared to training, while validation loss curves decreased ini3ally but flahened or slightly increased for some runs later in training, poten3ally indica3ng the point where overfiqng began. These visualizations effectively highlight EXP_1743551770 as the most successful experiment based on its strong generalization to the test set, supported by its performance trends on the validation set throughout the training process
