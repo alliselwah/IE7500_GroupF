@@ -8,7 +8,7 @@ To determine the most effective model architecture and hyperparameters, a system
 
 ## Analysis
 ![Relative](../images/mlflow_run_comparisons.png)
-This plot visualizes the relationship between selected hyperparameters (parameters) and resulting performance metrics across multiple experiments. Each line represents a single experimental run, connecting its specific parameter values and achieved metrics across the vertical axes. The color of the line corresponds to the validation accuracy, with brighter/warmer colors (like yellow/orange, towards the top of the color bar on the right) indicating higher accuracy (around 0.95-0.96) and darker/cooler colors (blue/purple, towards the bottom) indicating lower accuracy (around 0.91-0.92).
+The above  Each line represents a single experimental run, connecting its specific parameter values and achieved metrics across the vertical axes. The color of the line corresponds to the validation accuracy, with brighter/warmer colors (like yellow/orange, towards the top of the color bar on the right) indicating higher accuracy (around 0.95-0.96) and darker/cooler colors (blue/purple, towards the bottom) indicating lower accuracy (around 0.91-0.92).
 
 Here's a breakdown of the observations:
 
@@ -17,12 +17,34 @@ Here's a breakdown of the observations:
 2.  **Performance Range:** The validation and test accuracies across these 14 runs range roughly from a low of about 0.91 to a high of approximately 0.96.
 
 3.  **Key Parameter Influences:**
-    * **Number of Neurons:** There's a clear trend showing that runs using a higher number of neurons (the top value on the axis, likely 64 based on the earlier experiment table) consistently achieve higher validation and test accuracies (warmer colored lines). Runs with fewer neurons (likely 32) generally resulted in lower performance (cooler colored lines).
-    * **Embedding Dimension:** Higher embedding dimensions (values like 200 and perhaps 150) seem strongly correlated with better performance. The lines representing the highest accuracy runs predominantly pass through the upper range of this axis, while lower dimensions (like 100) are associated with lower accuracy lines.
-    * **RNN Type:** The plot shows distinct clusters for different RNN types. The highest performing runs (brightest lines) are concentrated on specific points on this axis, suggesting that certain RNN types (likely LSTM and perhaps GRU, based on run names below the plot and general performance expectations) significantly outperformed others (potentially the 'Simple' RNN type, which corresponds to some lower-performing runs).
+    * **Number of Neurons:** There's a clear trend showing that runs using a higher number of neurons (the top value on the axis, likely 64 based on the earlier experiment table) consistently achieved higher validation and test accuracies (warmer colored lines). Runs with fewer neurons (likely 32) generally resulted in lower performance (cooler colored lines).
+    * **Embedding Dimension:** Higher embedding dimensions (values like 200 and perhaps 150)  strongly correlated with better performance. The lines representing the highest accuracy runs predominantly pass through the upper range of this axis, while lower dimensions (like 100) are associated with lower accuracy lines.
+    * **RNN Type:** The plot shows distinct clusters for different RNN types. The highest performing runs (brightest lines) are concentrated on specific points on this axis, suggesting that certain RNN types ( LSTM and perhaps GRU, based on run names below the plot and general performance expectations) significantly outperformed others ( 'Simple' RNN type, which corresponds to  lower-performing runs).
     * **Epochs:** The relationship with epochs is less direct. While the highest accuracy runs seem to cluster around 10 to 15 epochs, there isn't a strict linear correlation. Some runs with high epochs show lower performance, and one high-performing run used around 10 epochs. This suggests an optimal range exists, but the exact number of epochs interacts with other parameters.
-    * **Activation Function:** It's harder to discern a strong pattern solely based on the activation function axis from this view. High-performing runs appear associated with multiple points on this axis, suggesting other parameters might have had a more dominant effect or that multiple activation functions worked well in combination with the right settings.
+    * **Activation Function:**  High-performing runs appear associated with multiple points on this axis, suggesting other parameters had a more dominant effect and  multiple activation functions worked well in combination with the right settings.
 
 4.  **Validation vs. Test Accuracy:** The lines generally maintain similar relative heights between the `val_accuracy` and `test_accuracy` axes. This indicates good generalization – models that performed well on the validation set also tended to perform well on the unseen test set. The best runs achieved both high validation and high test accuracy (~0.96).
 
-**In summary:** The parallel coordinates plot highlights that using a higher number of neurons (e.g., 64), a larger embedding dimension (e.g., 150-200), and selecting specific RNN architectures (likely LSTM or GRU) were crucial factors in achieving the best validation and test accuracies (around 0.96) in these experiments. The number of epochs showed an optimal range rather than a simple linear trend. The results also show good consistency between validation and test performance across the runs.
+**In summary:** The parallel coordinates plot highlights that using a higher number of neurons (e.g., 64), a larger 
+embedding dimension (e.g., 150-200), and selec3ng specific RNN architectures (likely LSTM or 
+GRU) were crucial factors in achieving the best valida3on and test accuracies (around 0.96) in these 
+experiments. The number of epochs showed an op3mal range rather than a simple linear trend. 
+The results also showed good consistency between valida3on and test performance across the 
+runs
+
+**Addi3onal Observations:** Based on the comparison charts for the Sen3ment Analysis experiments, several key observations 
+can be made regarding model performance across different runs. The dashboard displays test 
+accuracy, test loss, training accuracy, training loss, valida3on accuracy, and valida3on loss, allowing 
+for a comprehensive evalua3on.
+![Relative](../images/chart_Comparisons.png)
+Run EXP_1743551770 demonstrated superior performance, achieving the highest test accuracy of 
+approximately 0.9585, significantly beher than other compared runs which showed accuracies 
+around 0.92 or lower. This top-performing run also corresponded to the lowest test loss (around 
+0.17). The line graphs tracking metrics over training steps reveal expected learning curves: training 
+accuracy generally increased while training loss decreased, eventually plateauing for most runs. 
+Valida3on accuracy curves showed improvement but with more fluctua3ons compared to training, 
+while valida3on loss curves decreased ini3ally but flahened or slightly increased for some runs 
+later in training, poten3ally indica3ng the point where overfiqng began. These visualiza3ons
+effec3vely highlight EXP_1743551770 as the most successful experiment based on its strong 
+generaliza3on to the test set, supported by its performance trends on the valida3on set 
+throughout the training process
